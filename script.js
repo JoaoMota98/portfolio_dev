@@ -17,3 +17,15 @@ document.addEventListener("DOMContentLoaded",()=>{
         main.classList.remove("opacity-0", "translate-y-10");
     },500);
 })
+
+//API Github para pegar os repositórios do usuário
+async function getRepos(){ 
+    const reposJv = await fetch("https://api.github.com/users/JoaoMota98/repos");
+    const repos = await reposJv.json();
+
+    const meusFavoritos = repos.filter(projetos => projetos.topics.includes('portfolio'))
+console.log("Todos os projetos:",repos);
+console.log("Meus favoritos:",meusFavoritos);
+}
+
+getRepos();
