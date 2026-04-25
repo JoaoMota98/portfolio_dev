@@ -34,17 +34,17 @@ async function getRepos(){
         return `
         <div class="flex-none w-full sm:w-[350px] backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-[#7988f9] hover:border-2 transition-all flex flex-col items-center hover:scale-105 hover:shadow-[0_0_20px_#7988f9] gap-3">
 
-            <h3 class="w-full sm:w-[350px]text-[18px] font-bold text-white mb-2 text-center">${projeto.name}</h3>
+            <h3 class="w-full sm:w-[350px] text-[22px] font-bold text-white mb-2 text-center">${projeto.name}</h3>
 
-            <p class="text-gray-400 text-sm mb-4 text-center">${projeto.description || "Sem descrição"}</p>
+            <p class="text-gray-400 text-[16px] mb-4 text-center">${projeto.description || "Sem descrição"}</p>
 
-            <img src="${imagemUrl}" alt="Preview" class="w-full h-48 object-cover rounded-lg" onerror="this.src='https://placehold.co/600x400/1e1e1e/7988f9?text=Em+Breve'">
+            <img src="${imagemUrl}" alt="Preview" class="w-full h-48 object-cover rounded-lg " onerror="this.src='https://placehold.co/600x400/1e1e1e/7988f9?text=Em+Breve'">
 
-            <a href="${projeto.homepage}" target="_blank" class="text-[#7988f9] font-medium border border-white/10 px-4 py-2 rounded-lg transition-colors no-underline">
+            <a href="${projeto.homepage}" target="_blank" class="text-white font-[16px] font-bold border border-white/10 px-4 py-2 rounded-lg transition-colors no-underline bg-gradient-to-r from-[#285bfb] via-[#6b47fb] to-[#9517fa] hover:scale-105 hover:shadow-[0_0_20px_#7988f9] transition-all">
                 Ver Deploy
             </a>
 
-            <a href="${projeto.html_url}" target="_blank" class="text-[#7988f9] font-medium border border-white/10 px-4 py-2 rounded-lg transition-colors no-underline">
+            <a href="${projeto.html_url}" target="_blank" class="text-gray-400 font-medium border border-white/10 px-4 py-2 rounded-lg transition-colors no-underline">
                 Ver Repositório
             </a>
         </div>
